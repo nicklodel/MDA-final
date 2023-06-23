@@ -1,0 +1,263 @@
+data = arff.loadarff('abalone9-18.arff')
+df_abalone = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_abalone['Class'] = pd.factorize(df_abalone['Class'])[0]
+df_abalone['Sex'] = pd.factorize(df_abalone['Sex'])[0]
+trainAbalone, testAbalone = train_test_split(df_abalone, test_size=.25)
+X_trainAbalone = trainAbalone.drop('Class', axis=1)
+y_trainAbalone = trainAbalone['Class']
+X_testAbalone = testAbalone.drop('Class', axis=1)
+y_testAbalone = testAbalone['Class']
+
+data = arff.loadarff('australian.arff')
+df_australian = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_australian['Class'] = pd.factorize(df_australian['Class'])[0]
+trainAustralian, testAustralian = train_test_split(df_australian, test_size=.25)
+X_trainAustralian = trainAustralian.drop('Class', axis=1)
+y_trainAustralian = trainAustralian['Class']
+X_testAustralian = testAustralian.drop('Class', axis=1)
+y_testAustralian = testAustralian['Class']
+
+data = arff.loadarff('balance.arff')
+df_balance = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_balance['Class'] = pd.factorize(df_balance['Class'])[0]
+trainBalance, testBalance = train_test_split(df_balance, test_size=.25)
+X_trainBalance = trainBalance.drop('Class', axis=1)
+y_trainBalance = trainBalance['Class']
+X_testBalance = testBalance.drop('Class', axis=1)
+y_testBalance = testBalance['Class']
+
+data = arff.loadarff('car.arff')
+df_car = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_car['Acceptability'] = pd.factorize(df_car['Acceptability'])[0]
+df_car['Buying'] = pd.factorize(df_car['Buying'])[0]
+df_car['Maint'] = pd.factorize(df_car['Maint'])[0]
+df_car['Doors'] = pd.factorize(df_car['Doors'])[0]
+df_car['Persons'] = pd.factorize(df_car['Persons'])[0]
+df_car['Lug_boot'] = pd.factorize(df_car['Lug_boot'])[0]
+df_car['Safety'] = pd.factorize(df_car['Safety'])[0]
+trainCar, testCar = train_test_split(df_car, test_size=.25)
+X_trainCar = trainCar.drop('Acceptability', axis=1)
+y_trainCar = trainCar['Acceptability']
+X_testCar = testCar.drop('Acceptability', axis=1)
+y_testCar = testCar['Acceptability']
+
+data = arff.loadarff('chess.arff')
+df_chess = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_chess['Class'] = pd.factorize(df_chess['Class'])[0]
+df_chess['Bkblk'] = pd.factorize(df_chess['Bkblk'])[0]
+df_chess['Bknwy'] = pd.factorize(df_chess['Bknwy'])[0]
+df_chess['Bkon8'] = pd.factorize(df_chess['Bkon8'])[0]
+df_chess['Bkona'] = pd.factorize(df_chess['Bkona'])[0]
+df_chess['Bkspr'] = pd.factorize(df_chess['Bkspr'])[0]
+df_chess['Bkxbq'] = pd.factorize(df_chess['Bkxbq'])[0]
+df_chess['Bkxcr'] = pd.factorize(df_chess['Bkxcr'])[0]
+df_chess['Bkxwp'] = pd.factorize(df_chess['Bkxwp'])[0]
+df_chess['Blxwp'] = pd.factorize(df_chess['Blxwp'])[0]
+df_chess['Bxqsq'] = pd.factorize(df_chess['Bxqsq'])[0]
+df_chess['Cntxt'] = pd.factorize(df_chess['Cntxt'])[0]
+df_chess['Dsopp'] = pd.factorize(df_chess['Dsopp'])[0]
+df_chess['Dwipd'] = pd.factorize(df_chess['Dwipd'])[0]
+df_chess['Hdchk'] = pd.factorize(df_chess['Hdchk'])[0]
+df_chess['Katri5'] = pd.factorize(df_chess['Katri5'])[0]
+df_chess['Mulch'] = pd.factorize(df_chess['Mulch'])[0]
+df_chess['Qxmsq'] = pd.factorize(df_chess['Qxmsq'])[0]
+df_chess['R2ar8'] = pd.factorize(df_chess['R2ar8'])[0]
+df_chess['Reskd'] = pd.factorize(df_chess['Reskd'])[0]
+df_chess['Reskr'] = pd.factorize(df_chess['Reskr'])[0]
+df_chess['Rimmx'] = pd.factorize(df_chess['Rimmx'])[0]
+df_chess['Rkxwp'] = pd.factorize(df_chess['Rkxwp'])[0]
+df_chess['Rxmsq'] = pd.factorize(df_chess['Rxmsq'])[0]
+df_chess['Simpl'] = pd.factorize(df_chess['Simpl'])[0]
+df_chess['Skach'] = pd.factorize(df_chess['Skach'])[0]
+df_chess['Skewr'] = pd.factorize(df_chess['Skewr'])[0]
+df_chess['Skrxp'] = pd.factorize(df_chess['Skrxp'])[0]
+df_chess['Spcop'] = pd.factorize(df_chess['Spcop'])[0]
+df_chess['Stlmt'] = pd.factorize(df_chess['Stlmt'])[0]
+df_chess['Thrsk'] = pd.factorize(df_chess['Thrsk'])[0]
+df_chess['Wkcti'] = pd.factorize(df_chess['Wkcti'])[0]
+df_chess['Wkna8'] = pd.factorize(df_chess['Wkna8'])[0]
+df_chess['Wknck'] = pd.factorize(df_chess['Wknck'])[0]
+df_chess['Wkovl'] = pd.factorize(df_chess['Wkovl'])[0]
+df_chess['Wkpos'] = pd.factorize(df_chess['Wkpos'])[0]
+df_chess['Wtoeg'] = pd.factorize(df_chess['Wtoeg'])[0]
+trainChess, testChess = train_test_split(df_chess, test_size=.25)
+X_trainChess = trainChess.drop('Class', axis=1)
+y_trainChess = trainChess['Class']
+X_testChess = testChess.drop('Class', axis=1)
+y_testChess = testChess['Class']
+
+data = arff.loadarff('german.arff')
+df_german = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_german['Customer'] = pd.factorize(df_german['Customer'])[0]
+df_german['Customer'] = pd.factorize(df_german['Customer'])[0]
+df_german['StatusAccount'] = pd.factorize(df_german['StatusAccount'])[0]
+df_german['CreditHistory'] = pd.factorize(df_german['CreditHistory'])[0]
+df_german['Purpose'] = pd.factorize(df_german['Purpose'])[0]
+df_german['SavingsAccount'] = pd.factorize(df_german['SavingsAccount'])[0]
+df_german['EmploymentSince'] = pd.factorize(df_german['EmploymentSince'])[0]
+df_german['StatusAndSex'] = pd.factorize(df_german['StatusAndSex'])[0]
+df_german['Guarantors'] = pd.factorize(df_german['Guarantors'])[0]
+df_german['Property'] = pd.factorize(df_german['Property'])[0]
+df_german['InstallmentPlans'] = pd.factorize(df_german['InstallmentPlans'])[0]
+df_german['Housing'] = pd.factorize(df_german['Housing'])[0]
+df_german['Job'] = pd.factorize(df_german['Job'])[0]
+df_german['Telephone'] = pd.factorize(df_german['Telephone'])[0]
+df_german['ForeignWorker'] = pd.factorize(df_german['ForeignWorker'])[0]
+trainGerman, testGerman = train_test_split(df_german, test_size=.25)
+X_trainGerman = trainGerman.drop('Customer', axis=1)
+y_trainGerman = trainGerman['Customer']
+X_testGerman = testGerman.drop('Customer', axis=1)
+y_testGerman = testGerman['Customer']
+
+data = arff.loadarff('glass.arff')
+df_glass = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_glass['TypeGlass'] = pd.factorize(df_glass['TypeGlass'])[0]
+trainGlass, testGlass = train_test_split(df_glass, test_size=.25)
+X_trainGlass = trainGlass.drop('TypeGlass', axis=1)
+y_trainGlass = trainGlass['TypeGlass']
+X_testGlass = testGlass.drop('TypeGlass', axis=1)
+y_testGlass = testGlass['TypeGlass']
+
+data = arff.loadarff('ionosphere.arff')
+df_iono = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_iono['class'] = pd.factorize(df_iono['class'])[0]
+trainIono, testIono = train_test_split(df_iono, test_size=.25)
+X_trainIono = trainIono.drop('class', axis=1)
+y_trainIono = trainIono['class']
+X_testIono = testIono.drop('class', axis=1)
+y_testIono = testIono['class']
+
+data = arff.loadarff('iris.arff')
+df_iris = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_iris['Class'] = pd.factorize(df_iris['Class'])[0]
+trainIris, testIris = train_test_split(df_iris, test_size=.25)
+X_trainIris = trainIris.drop('Class', axis=1)
+y_trainIris = trainIris['Class']
+X_testIris = testIris.drop('Class', axis=1)
+y_testIris = testIris['Class']
+
+data = arff.loadarff('heart.arff')
+df_heart = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_heart['Class'] = pd.factorize(df_heart['Class'])[0]
+trainHeart, testHeart = train_test_split(df_heart, test_size=.25)
+X_trainHeart = trainHeart.drop('Class', axis=1)
+y_trainHeart = trainHeart['Class']
+X_testHeart = testHeart.drop('Class', axis=1)
+y_testHeart = testHeart['Class']
+
+data = arff.loadarff('hepatitis.arff')
+df_hepatitis = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_hepatitis['Class'] = pd.factorize(df_hepatitis['Class'])[0]
+trainHepatitis, testHepatitis = train_test_split(df_hepatitis, test_size=.25)
+X_trainHepatitis = trainHepatitis.drop('Class', axis=1)
+y_trainHepatitis = trainHepatitis['Class']
+X_testHepatitis = testHepatitis.drop('Class', axis=1)
+y_testHepatitis = testHepatitis['Class']
+
+data = arff.loadarff('housevotes.arff')
+df_housevotes = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_housevotes['Class'] = pd.factorize(df_housevotes['Class'])[0]
+df_housevotes['Class'] = pd.factorize(df_housevotes['Class'])[0]
+df_housevotes['Handicapped_infants'] = pd.factorize(df_housevotes['Handicapped_infants'])[0]
+df_housevotes['Water_project_cost'] = pd.factorize(df_housevotes['Water_project_cost'])[0]
+df_housevotes['Adoption_budget_resolution'] = pd.factorize(df_housevotes['Adoption_budget_resolution'])[0]
+df_housevotes['Physician_fee_freeze'] = pd.factorize(df_housevotes['Physician_fee_freeze'])[0]
+df_housevotes['El_salvador_aid'] = pd.factorize(df_housevotes['El_salvador_aid'])[0]
+df_housevotes['Religious_groups_in_schools'] = pd.factorize(df_housevotes['Religious_groups_in_schools'])[0]
+df_housevotes['Anti_satellite_test_ban'] = pd.factorize(df_housevotes['Anti_satellite_test_ban'])[0]
+df_housevotes['Aid_to_nicaraguan_contras'] = pd.factorize(df_housevotes['Aid_to_nicaraguan_contras'])[0]
+df_housevotes['Mx_missile'] = pd.factorize(df_housevotes['Mx_missile'])[0]
+df_housevotes['Immigration'] = pd.factorize(df_housevotes['Immigration'])[0]
+df_housevotes['Synfuels_corporation_cutback'] = pd.factorize(df_housevotes['Synfuels_corporation_cutback'])[0]
+df_housevotes['Education_spending'] = pd.factorize(df_housevotes['Education_spending'])[0]
+df_housevotes['Superfund_right_to_sue'] = pd.factorize(df_housevotes['Superfund_right_to_sue'])[0]
+df_housevotes['Crime'] = pd.factorize(df_housevotes['Crime'])[0]
+df_housevotes['Duty_free_exports'] = pd.factorize(df_housevotes['Duty_free_exports'])[0]
+df_housevotes['Export_south_africa'] = pd.factorize(df_housevotes['Export_south_africa'])[0]
+trainHousevotes, testHousevotes = train_test_split(df_housevotes, test_size=.25)
+X_trainHousevotes = trainHousevotes.drop('Class', axis=1)
+y_trainHousevotes = trainHousevotes['Class']
+X_testHousevotes = testHousevotes.drop('Class', axis=1)
+y_testHousevotes = testHousevotes['Class']
+
+data = arff.loadarff('pima.arff')
+df_pima = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_pima['class'] = pd.factorize(df_pima['class'])[0]
+trainPima, testPima = train_test_split(df_pima, test_size=.25)
+X_trainPima = trainPima.drop('class', axis=1)
+y_trainPima = trainPima['class']
+X_testPima = testPima.drop('class', axis=1)
+y_testPima = testPima['class']
+
+data = arff.loadarff('tic-tac-toe.arff')
+df_ttt = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_ttt['Class'] = pd.factorize(df_ttt['Class'])[0]
+df_ttt['TopLeft'] = pd.factorize(df_ttt['TopLeft'])[0]
+df_ttt['TopMiddle'] = pd.factorize(df_ttt['TopMiddle'])[0]
+df_ttt['TopRight'] = pd.factorize(df_ttt['TopRight'])[0]
+df_ttt['MiddleLeft'] = pd.factorize(df_ttt['MiddleLeft'])[0]
+df_ttt['MiddleMiddle'] = pd.factorize(df_ttt['MiddleMiddle'])[0]
+df_ttt['MiddleRight'] = pd.factorize(df_ttt['MiddleRight'])[0]
+df_ttt['BottomLeft'] = pd.factorize(df_ttt['BottomLeft'])[0]
+df_ttt['BottomMiddle'] = pd.factorize(df_ttt['BottomMiddle'])[0]
+df_ttt['BottomRight'] = pd.factorize(df_ttt['BottomRight'])[0]
+trainTtt, testTtt = train_test_split(df_ttt, test_size=.25)
+X_trainTtt = trainTtt.drop('Class', axis=1)
+y_trainTtt = trainTtt['Class']
+X_testTtt = testTtt.drop('Class', axis=1)
+y_testTtt = testTtt['Class']
+
+data = arff.loadarff('vehicle0.arff')
+df_vehicle = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_vehicle['Class'] = pd.factorize(df_vehicle['Class'])[0]
+trainVehicle, testVehicle = train_test_split(df_vehicle, test_size=.25)
+X_trainVehicle = trainVehicle.drop('Class', axis=1)
+y_trainVehicle = trainVehicle['Class']
+X_testVehicle = testVehicle.drop('Class', axis=1)
+y_testVehicle = testVehicle['Class']
+
+data = arff.loadarff('vowel0.arff')
+df_vowel = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_vowel['Class'] = pd.factorize(df_vowel['Class'])[0]
+trainVowel, testVowel = train_test_split(df_vowel, test_size=.25)
+X_trainVowel = trainVowel.drop('Class', axis=1)
+y_trainVowel = trainVowel['Class']
+X_testVowel = testVowel.drop('Class', axis=1)
+y_testVowel = testVowel['Class']
+
+data = arff.loadarff('wine.arff')
+df_wine = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_wine['Class'] = pd.factorize(df_wine['Class'])[0]
+trainWine, testWine = train_test_split(df_wine, test_size=.25)
+X_trainWine = trainWine.drop('Class', axis=1)
+y_trainWine = trainWine['Class']
+X_testWine = testWine.drop('Class', axis=1)
+y_testWine = testWine['Class']
+
+data = arff.loadarff('wisconsin.arff')
+df_wisconsin = pd.DataFrame(data[0])
+# Changing the last categorical class value into a numerical value
+df_wisconsin['Class'] = pd.factorize(df_wisconsin['Class'])[0]
+trainWisconsin, testWisconsin = train_test_split(df_wisconsin, test_size=.25)
+X_trainWisconsin = trainWisconsin.drop('Class', axis=1)
+y_trainWisconsin = trainWisconsin['Class']
+X_testWisconsin = testWisconsin.drop('Class', axis=1)
+y_testWisconsin = testWisconsin['Class']
+
